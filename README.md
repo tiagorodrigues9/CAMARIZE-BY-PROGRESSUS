@@ -1,167 +1,115 @@
-# 🦐 CAMARIZE - Aquicultura Inteligente
+# 🦐 PROGRESSUS - Projeto CAMARIZE
 
-Um site moderno e interativo para o projeto Camarize, focado em revolucionar a aquicultura no Vale do Ribeira através de tecnologia e sustentabilidade.
-
-## ✨ Novas Funcionalidades Implementadas
-
-### 🎨 **Design e Animações**
-- **Paleta de cores preservada** - Mantivemos a identidade visual original
-- **Animações fluidas** - Transições suaves com `cubic-bezier(0.4, 0, 0.2, 1)`
-- **Efeitos 3D** - Cards com perspectiva e rotação no hover
-- **Partículas interativas** - 80+ partículas flutuantes no hero
-- **Partículas que seguem o mouse** - Efeito de rastro no hero
-- **Formas geométricas morphing** - Elementos que se transformam no hero
-
-### 🚀 **Interatividade**
-- **Efeito de tilt 3D** - Cards respondem ao movimento do mouse
-- **Cursor brilhante** - Indicador visual personalizado
-- **Scroll progress bar** - Barra de progresso no topo da página
-- **Animações stagger** - Elementos aparecem em sequência
-- **Hover effects avançados** - Transições suaves e transformações
-- **Navegação mobile otimizada** - Menu responsivo com animações
-
-### 🎭 **Animações de Entrada**
-- **Fade in escalonado** - Elementos aparecem com delay
-- **Typewriter effect** - Título principal com efeito de digitação
-- **Reveal text** - Textos aparecem suavemente
-- **Parallax suave** - Elementos com movimento em profundidade
-- **Intersection Observer** - Animações baseadas na viewport
-
-### 🎯 **Melhorias de UX**
-- **Navbar com blur** - Efeito de vidro fosco
-- **Botões com brilho** - Efeito de sweep no hover
-- **Cards com elevação** - Sombras dinâmicas e transformações
-- **Ícones animados** - Rotação 3D no hover
-- **Imagens responsivas** - Scale e transições suaves
-- **Gradientes dinâmicos** - Cores que se movem
-
-### 📱 **Responsividade**
-- **Mobile-first approach** - Otimizado para todos os dispositivos
-- **Breakpoints inteligentes** - Adaptação automática ao tamanho da tela
-- **Touch-friendly** - Interações otimizadas para dispositivos móveis
-- **Performance otimizada** - Animações suaves em todos os dispositivos
-
-## 🛠️ **Tecnologias Utilizadas**
-
-- **HTML5** - Estrutura semântica e acessível
-- **CSS3** - Animações avançadas, Grid, Flexbox
-- **JavaScript ES6+** - Funcionalidades interativas e animações
-- **Font Awesome 6** - Ícones vetoriais
-- **Google Fonts** - Tipografia Inter com múltiplos pesos
-- **Intersection Observer API** - Animações baseadas em scroll
-- **CSS Custom Properties** - Variáveis para consistência visual
-
-## 🎨 **Paleta de Cores**
-
-- **Primária**: `#e74c3c` (Vermelho coral)
-- **Secundária**: `#ff6b6b` (Rosa coral)
-- **Acentos**: `#ff8a80` (Coral claro)
-- **Neutros**: `#333`, `#666`, `#f8f9fa`
-- **Gradientes**: Combinações suaves entre as cores principais
-
-## 🚀 **Como Usar**
-
-1. **Clone o repositório**
-   ```bash
-   git clone [url-do-repositorio]
-   cd CAMARIZE-BY-PROGRESSUS
-   ```
-
-2. **Abra o arquivo**
-   - Abra `index.html` em qualquer navegador moderno
-   - Ou use um servidor local para melhor performance
-
-3. **Explore as funcionalidades**
-   - Role a página para ver as animações
-   - Passe o mouse sobre os cards para efeitos 3D
-   - Teste no mobile para ver a responsividade
-
-## 📱 **Funcionalidades por Dispositivo**
-
-### 🖥️ **Desktop**
-- Todas as animações 3D ativas
-- Efeitos de hover completos
-- Cursor brilhante visível
-- Partículas interativas
-
-### 📱 **Mobile**
-- Animações otimizadas para touch
-- Efeitos 3D simplificados
-- Performance otimizada
-- Navegação mobile-friendly
-
-## 🎯 **Seções do Site**
-
-1. **Hero** - Apresentação principal com partículas
-2. **Sobre** - Informações sobre o projeto
-3. **Serviços** - Detalhes dos serviços oferecidos
-4. **Equipe** - Membros do projeto
-5. **Contato** - Informações de contato
-6. **Footer** - Rodapé com logo
-
-## 🔧 **Personalização**
-
-### **Cores**
-Edite as variáveis CSS em `css/style.css`:
-```css
-:root {
-  --primary-color: #e74c3c;
-  --secondary-color: #ff6b6b;
-  --accent-color: #ff8a80;
-}
-```
-
-### **Animações**
-Ajuste as durações em `js/function.js`:
-```javascript
-const animationDuration = 1000; // 1 segundo
-const staggerDelay = 150; // 150ms entre elementos
-```
-
-### **Partículas**
-Configure o número de partículas em `js/function.js`:
-```javascript
-for (let i = 0; i < 80; i++) { // 80 partículas
-```
-
-## 📊 **Performance**
-
-- **Lazy loading** para imagens
-- **Debounced scroll events** para otimização
-- **CSS transforms** para animações suaves
-- **Intersection Observer** para eficiência
-- **RequestAnimationFrame** para animações fluidas
-
-## 🌟 **Destaques**
-
-- ✅ **100% responsivo** - Funciona em todos os dispositivos
-- ✅ **Animações suaves** - 60fps em dispositivos modernos
-- ✅ **Acessibilidade** - Navegação por teclado e screen readers
-- ✅ **SEO otimizado** - Estrutura semântica HTML5
-- ✅ **Performance** - Carregamento rápido e animações fluidas
-- ✅ **Cross-browser** - Compatível com navegadores modernos
-
-## 🤝 **Contribuição**
-
-Para contribuir com melhorias:
-
-1. Fork o projeto
-2. Crie uma branch para sua feature
-3. Commit suas mudanças
-4. Push para a branch
-5. Abra um Pull Request
-
-## 📄 **Licença**
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 👥 **Equipe**
-
-- **Isabele Queiroz** - Back-End & Documentação
-- **João Kusaka** - Front-End & Apex Low Code
-- **Tiago Rodrigues** - Autor do Artigo
-- **Victor Roder** - Banco de Dados
+Bem-vindo ao repositório oficial do projeto **Camarize**, desenvolvido pela equipe **Progressus**. Este projeto tem como missão principal revolucionar a aquicultura sustentável, com foco inicial na região do Vale do Ribeira, utilizando tecnologias avançadas e Internet das Coisas (IoT) para monitorar e otimizar a criação de camarões em cativeiro.
 
 ---
 
-**Camarize** - Revolucionando a aquicultura através da tecnologia e sustentabilidade! 🦐✨
+## 🎯 Nosso Propósito
+
+A aquicultura tradicional enfrenta diversos desafios em relação à manutenção da qualidade da água, monitoramento de saúde animal e eficiência na alimentação. 
+
+O **Sistema Camarize** foi idealizado para suprir essas necessidades através de:
+- **Monitoramento Contínuo**: Uso de sensores especializados para coletar dados críticos do ambiente (pH, temperatura, oxigenação).
+- **Automação Inteligente**: Alimentação automatizada baseada na necessidade real da criação.
+- **Sustentabilidade e Qualidade**: Otimização de recursos visando uma produção com menor impacto ambiental e focado na alta gastronomia.
+
+---
+
+## 💻 Arquitetura e Tecnologias
+
+A landing page do projeto foi totalmente refatorada e modernizada. Saímos de uma estrutura estática em HTML/JS Vanilla para uma arquitetura baseada em componentes, garantindo alta performance e manutenibilidade.
+
+**Stack Tecnológico Atual:**
+*   ⚡ **[Vite](https://vitejs.dev/)**: Ferramenta de build extremamente rápida.
+*   ⚛️ **[React 18](https://react.dev/)**: Biblioteca principal para a interface do usuário.
+*   📘 **[TypeScript](https://www.typescriptlang.org/)**: Adicionando tipagem estática para maior segurança no desenvolvimento.
+*   🎨 **[Tailwind CSS v4](https://tailwindcss.com/)**: Framework utility-first utilizado para todo o sistema de design e responsividade (Configurado via `@theme` no CSS).
+*   🎬 **[Framer Motion](https://www.framer.com/motion/)**: Biblioteca responsável pelas animações suaves de entrada, transições complexas e interações visuais (*scroll animations*).
+*   🧩 **[Lucide React](https://lucide.dev/)** & **[React Icons](https://react-icons.github.io/react-icons/)**: Coleção de ícones vetoriais modernos.
+
+---
+
+## 📂 Estrutura do Projeto
+
+A aplicação está dividida de forma modular em `src/components`:
+
+```text
+CAMARIZE-BY-PROGRESSUS/
+├── public/                 # Assets públicos estáticos
+│   └── imgs/               # Logos, imagens de background e fotos da equipe
+├── src/
+│   ├── components/
+│   │   ├── Navbar.tsx      # Barra de navegação com efeito glassmorphism
+│   │   ├── Hero.tsx        # Seção principal com partículas e CTA
+│   │   ├── About.tsx       # Detalhes sobre a equipe Progressus
+│   │   ├── Services.tsx    # Explicação do sistema IoT e vídeo Pitch
+│   │   ├── Team.tsx        # Integrantes da equipe
+│   │   ├── Contact.tsx     # Informações de contato e redes sociais
+│   │   └── Footer.tsx      # Rodapé do site
+│   ├── App.tsx             # Agregador de todos os componentes
+│   ├── main.tsx            # Ponto de entrada do React
+│   └── index.css           # Estilos globais e configuração do Tailwind CSS v4
+├── legacy_html/            # Backup da versão anterior (HTML/CSS Vanilla)
+├── index.html              # Template principal (Onde o Favicon é definido)
+└── package.json            # Dependências e scripts
+```
+
+---
+
+## 🚀 Como Executar Localmente
+
+Siga as instruções abaixo para testar o site no seu ambiente de desenvolvimento:
+
+1. **Clone o Repositório:**
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   cd CAMARIZE-BY-PROGRESSUS
+   ```
+
+2. **Instale as Dependências:**
+   Certifique-se de ter o [Node.js](https://nodejs.org/) instalado.
+   ```bash
+   npm install
+   ```
+
+3. **Inicie o Servidor de Desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+   > O Vite irá iniciar um servidor local e disponibilizar o link no terminal (geralmente `http://localhost:5173/`).
+
+4. **Gerar Versão de Produção (Build):**
+   Para verificar a integridade da aplicação ou preparar para deploy, rode:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 🎨 Identidade Visual e Personalização
+
+Toda a parte de padronização visual está concentrada na engine do Tailwind v4, definida nativamente dentro de `src/index.css`.
+
+Caso deseje alterar o esquema de cores, basta ajustar as variáveis de tema:
+```css
+@theme {
+  --color-primary: #e74c3c;     /* Vermelho/Laranja principal */
+  --color-secondary: #ff6b6b;   /* Gradiente Secundário */
+  --color-accent: #ff8a80;
+  --font-sans: 'Inter', sans-serif;
+}
+```
+
+---
+
+## 👥 A Equipe Progressus
+
+O projeto é mantido pelos especialistas:
+*   **Tiago Rodrigues** - Responsável pela pesquisa científica, documentação e redação do Artigo.
+*   **Leandro Augusto** - Especialista em IoT (Arduíno, Sensores) e Design.
+*   **Davi Mathais** - Especialista em Desenvolvimento Full Stack e Design.
+
+---
+
+## 📝 Licença
+© 2024 Progressus. Todos os direitos reservados. Este projeto possui fins acadêmicos e de inovação tecnológica.
