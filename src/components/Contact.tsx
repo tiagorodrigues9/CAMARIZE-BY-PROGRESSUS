@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import { Mail, MapPin, Phone } from 'lucide-react';
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 
 export default function Contact() {
   const contactInfo = [
@@ -17,9 +19,48 @@ export default function Contact() {
     {
       icon: <Phone className="w-6 h-6 text-white" />,
       title: "Telefone",
-      detail: "+55 (11) 99999-9999"
+      detail: "+55 (13) 99656-6700"
     }
   ];
+
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) return;
+    
+    setIsSubmitting(true);
+    setStatus('idle');
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_1kruw8j';
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_i5g337q';
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'nyjLCsUaKE-Rjhi8Y';
+
+    emailjs.send(
+      serviceId,
+      templateId,
+      {
+        from_name: formData.name,
+        reply_to: formData.email,
+        message: formData.message,
+      },
+      publicKey
+    )
+    .then(() => {
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch((error) => {
+      console.error('EmailJS Error:', error);
+      setStatus('error');
+    })
+    .finally(() => {
+      setIsSubmitting(false);
+      setTimeout(() => setStatus('idle'), 5000);
+    });
+  };
 
   return (
     <section id="contato" className="py-24 bg-white relative">
@@ -70,14 +111,8 @@ export default function Contact() {
             <div className="mt-16">
               <h4 className="text-white/80 text-sm font-medium mb-4">Siga-nos nas redes sociais</h4>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white hover:text-primary hover:-translate-y-1 transition-all duration-300">
-                  <FaGithub size={18} />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white hover:text-primary hover:-translate-y-1 transition-all duration-300">
+                <a href="https://www.instagram.com/projeto_camarize?igsh=ZzBpM2dkbHl1Mmhu" className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white hover:text-primary hover:-translate-y-1 transition-all duration-300">
                   <FaInstagram size={18} />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white hover:text-primary hover:-translate-y-1 transition-all duration-300">
-                  <FaLinkedin size={18} />
                 </a>
               </div>
             </div>
@@ -91,12 +126,16 @@ export default function Contact() {
             className="p-12 md:w-3/5 bg-gray-50"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Envie uma mensagem</h3>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-gray-700">Nome Completo</label>
                 <input 
                   type="text" 
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-white"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-white disabled:opacity-50"
                   placeholder="Seu nome"
                 />
               </div>
@@ -104,7 +143,11 @@ export default function Contact() {
                 <label className="text-sm font-semibold text-gray-700">E-mail</label>
                 <input 
                   type="email" 
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-white"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-white disabled:opacity-50"
                   placeholder="seu@email.com"
                 />
               </div>
@@ -112,16 +155,36 @@ export default function Contact() {
                 <label className="text-sm font-semibold text-gray-700">Mensagem</label>
                 <textarea 
                   rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-white resize-none"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-white resize-none disabled:opacity-50"
                   placeholder="Como podemos ajudar?"
                 ></textarea>
               </div>
-              <button 
-                type="submit"
-                className="w-full bg-gray-900 text-white font-bold py-4 rounded-xl bg-gray-900"
-              >
-                Enviar Mensagem
-              </button>
+              <div className="relative pb-6">
+                <button 
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                >
+                  {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
+                </button>
+                
+                <div className="absolute bottom-0 left-0 w-full">
+                  {status === 'success' && (
+                    <motion.p initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="text-green-600 font-medium text-center text-sm">
+                      Mensagem enviada com sucesso!
+                    </motion.p>
+                  )}
+                  {status === 'error' && (
+                    <motion.p initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="text-red-600 font-medium text-center text-sm">
+                      Erro ao enviar. Tente novamente.
+                    </motion.p>
+                  )}
+                </div>
+              </div>
             </form>
           </motion.div>
 

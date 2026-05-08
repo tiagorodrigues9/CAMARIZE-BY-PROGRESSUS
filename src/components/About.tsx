@@ -50,7 +50,7 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Inovação na Aquicultura</h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                A <strong className="text-primary">Progressus</strong> é uma equipe dedicada a revolucionar a aquicultura na região do Vale do Ribeira. Nosso sistema, aliado ao uso de tecnologias avançadas, auxilia na produção e criação de camarões em cativeiro, captando e analisando dados do ambiente de desenvolvimento.
+                A <strong className="text-primary">Progressus</strong> é uma equipe dedicada a revolucionar a aquicultura na região do Vale do Ribeira. Nosso sistema, aliado ao uso de tecnologias avançadas, auxilia na produção e criação de camarões em cativeiro, automatizando a alimentação, captando e administrando os dados dos habitats.
               </p>
             </motion.div>
 
