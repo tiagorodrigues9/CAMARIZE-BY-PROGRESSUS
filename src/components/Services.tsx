@@ -20,7 +20,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicos" className="py-24 bg-white relative">
+    <section id="servicos" className="py-24 bg-white relative border-t-4 border-transparent" style={{ borderImage: 'linear-gradient(to right, #e74c3c, #ff6b6b) 1' }}>
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16">
           <motion.h2 
