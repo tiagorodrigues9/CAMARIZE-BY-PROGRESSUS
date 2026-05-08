@@ -62,9 +62,9 @@ export default function Hero() {
           className="text-white space-y-8"
         >
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-xl">
-            Revolucionando a <br/>
+            Revolucionando<br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-red-100">
-              Aquicultura
+             a Aquicultura
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 font-light max-w-lg leading-relaxed">
