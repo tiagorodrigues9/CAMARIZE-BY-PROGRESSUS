@@ -22,10 +22,10 @@ export default function Team() {
     {
       name: "Davi Mathais",
       role: "Desenvolvedor Full Stack",
-      img: "/imgs/profile_leandro.jpeg",
-      github: "https://github.com/Leandr0-August0",
-      instagram: "https://www.instagram.com/muniz_leandr0?igsh=MXhpdm9jcDEwdXI4cA==",
-      linkedin: "https://www.linkedin.com/in/leandromuniz-4ab3942b5?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+      img: "/imgs/profile_davi.jpeg",
+      github: "https://github.com/cksalmeida",
+      instagram: "https://www.instagram.com/cksalmeida/",
+      linkedin: "https://www.linkedin.com/in/cksalmeida/"
     }
   ];
 
