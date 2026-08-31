@@ -92,13 +92,6 @@ export default function Hero() {
           {/* Glow effect behind the image */}
           <div className="absolute w-[120%] h-[120%] bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           
-          <motion.img 
-            src="/imgs/camarao.png" 
-            alt="Camarão Ilustração" 
-            className="w-full max-w-md drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative z-10"
-            animate={{ y: [-15, 15, -15] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          />
         </motion.div>
       </div>
 
